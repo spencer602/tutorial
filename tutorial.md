@@ -82,7 +82,7 @@ It is important to remember that the virtual table associated with a view is str
 
     create view temp as select * from motorcycle;
 
-    select * from motorcycle
+    select * from motorcycle;
     select * from temp;
 
     delete from motorcycle where year = 2017;
