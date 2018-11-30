@@ -11,9 +11,9 @@ There are many benefits to be gained from understanding when, where and how to u
 
 Assume we have the following tables in our database:
 
-    motorcycle(vin int, year int, make text);
-    rider(id int, name text, age int);
-    rides(id int, vin int);
+    motorcycle(vin int, year int, make text)
+    rider(id int, name text, age int)
+    rides(id int, vin int)
 
 ### Productivity:
 In many cases, we can use views to simplify queries. A common situation arises where we need to frequently reference a common join of desired attributes from several tables. Creating a view allows us to simply reference the view repeatedly implementing the query. For example, assume we are frequently interested in retrieving only the age of the rider and year of the motorcycle they ride. We find ourself constantly typing the same query. With views, we can create a view of the data of interest. Then, we can simply reference the view we created instead of typing the query repeatedly. 
