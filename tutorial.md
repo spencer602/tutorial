@@ -24,9 +24,7 @@ Security can be another benefit of using views. Views have very limited `UPDATE`
 ### Abstraction:
 Discussing of the security benefits leads in to the last (discussed) benefit of using views: abstraction. When using a view, it is not necessary to understand the organization of the model or what each underlying relation (table) contains. Instead, we can simply query the view containing the data of interest. This benefit of abstraction gives us great flexibility with the number of different uses we can achieve from a relational database system. 
 
-
 ## How to create your first view:
-
 
 The syntax for creating a view is very simple. Say we want to create a view titled `age_make_view` that shows us only the age of the rider and make of the motorcycle for every `rides` instance. We will use the following code:
 
@@ -43,7 +41,6 @@ Notice in this syntax, we didn’t provide explicit attribute names for the fiel
     WHERE rides.id = rider.id AND rides.vin = motorcycle.vin
 
 Note that in the first `CREATE VIEW` example, we could have chosen to give the view explicit attribute names even though we didn’t have to. 
-
 
 ## Example Using A View:
 Lets illustrate the previous two code blocks with an example. Assume we have a table 
@@ -71,7 +68,6 @@ When we no longer need to reference the view, we can drop it with the `DROP VIEW
     DROP VIEW view_name;
 
 It is important to remember that the virtual table associated with a view is strongly dependent on its owning table. If data used in the view is changed in the owning table, the data is also changed in the view. This includes adding, modifying, or removing data from the tables. The data in the view represents the data derived from the owning tables at the time of referencing the view. In that sense, it is safe to think of the view as being updated every time the data in the owning table is updated. Try the following example to illustrate this concept.
-
 
     create table motorcycle(vin int, year int, make text);
 
@@ -135,7 +131,6 @@ Now let's introduce a few examples to illustrate the topics we have covered in t
     insert into rides values(93, 1368);
     insert into rides values(93, 1575);
 
-
 ## Example 1:
 Let’s work through this example together. Then you can work through some problems on your own. This example should realize the benefit of efficiency as discussed in the beginning of the tutorial. Suppose we are frequently interested in listing the names of the rider and the make of the motorcycle for every `rides` instance. Instead of scripting a `SELECT` statement to achieve this every time we need it, we can create a view to reference as follows:
 
@@ -151,7 +146,6 @@ Suppose Husqvarna wants to brag about the result of their race bikes at last wee
 
 ## Example 3:
 As mentioned earlier, some bikes are ridden by multiple riders. Create a list of bikes ridden by only one rider, where that one rider also rides a bike that is ridden by multiple riders. (Hint: see the above paragraph discussing using views as a tool for abstraction to make this compound problem less complex)
-
 
 ## References: 
 
