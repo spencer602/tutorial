@@ -153,7 +153,7 @@ Suppose Husqvarna wants to brag about the result of their race bikes at last wee
 As mentioned earlier, some bikes are ridden by multiple riders. Create a list of bikes ridden by only one rider, where that one rider also rides a bike that is ridden by multiple riders. (Hint: see the above paragraph discussing using views as a tool for abstraction to make this compound problem less complex)
 
 
-##References: 
+## References: 
 
 techtud: Understanding VIEWs in SQL
 https://www.techtud.com/video-lecture/understanding-views-sql
