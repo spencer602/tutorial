@@ -31,14 +31,14 @@ The syntax for creating a view is very simple. Say we want to create a view titl
     CREATE VIEW age_make_view 
     AS SELECT age, make
     FROM motorcycle, rider, rides
-    WHERE rides.id = rider.id AND rides.vin = motorcycle.vin
+    WHERE rides.id = rider.id AND rides.vin = motorcycle.vin;
 
 Notice in this syntax, we didn’t provide explicit attribute names for the fields in the view. When the attributes assigned to the view are all unique and NOT derived, we don’t have to specify attribute names (they will inherit the attribute names from the owning table). If the attribute names are NOT all unique, or the values will be derived (thus don’t have names to inherit), we must include attribute names using the syntax as follows:
 
     CREATE VIEW age_make_view(rider_age, motorcycle_make) 
     AS SELECT age, make
     FROM motorcycle, rider, rides
-    WHERE rides.id = rider.id AND rides.vin = motorcycle.vin
+    WHERE rides.id = rider.id AND rides.vin = motorcycle.vin;
 
 Note that in the first `CREATE VIEW` example, we could have chosen to give the view explicit attribute names even though we didn’t have to. 
 
